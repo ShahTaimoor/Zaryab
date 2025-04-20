@@ -18,7 +18,7 @@ const orderAdminRoutes = require('./routes/orderAdminRoutes')
 
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: process.env.VITE_FRONTEND_URL, 
     credentials: true
 }));
 

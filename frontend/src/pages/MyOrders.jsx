@@ -51,25 +51,7 @@ const MyOrders = () => {
         </div>
     );
 
-    if (error) return (
-        <div className="max-w-7xl mx-auto p-4 sm:p-6">
-            <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                <p className="text-red-600 font-medium">Error loading orders</p>
-                <p className="text-sm text-red-500 mt-1">{error}</p>
-                <p className="text-xs text-gray-500 mt-2">Retry attempt: {retryCount}</p>
-                <button
-                    onClick={handleRetry}
-                    disabled={loading}
-                    className={`mt-3 px-4 py-2 rounded-lg transition-colors text-sm ${
-                        loading ? 'bg-gray-300 cursor-not-allowed' : 'bg-red-600 hover:bg-red-700 text-white'
-                    }`}
-                >
-                    {loading ? 'Retrying...' : 'Retry'}
-                </button>
-            </div>
-        </div>
-    );
-
+   
     return (
         <div className="max-w-7xl mx-auto p-4 sm:p-6">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
